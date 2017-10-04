@@ -40,15 +40,15 @@ flex: 1 100%;
 }
 
 #three {
-
+order: 3;
 }
 
 #two {
-
+order: 2;
 }
 
 #one {
-
+order: 1;
 }
 
 @media screen and (min-width: 600px) {
