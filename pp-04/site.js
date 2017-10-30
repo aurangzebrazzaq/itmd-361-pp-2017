@@ -18,9 +18,14 @@ console.log('The value of x is:', x, 'It should be 5.');
 //  function can be accessed via the `window` global object,
 //  like `window.x`):
 (function() {
-  var x = 5;
-  x = x * 2;
+   var x = 5;
 
+   function double(num) {
+     var x = num*2;
+     return x;
+  }
+
+  double(6);
   console.log('The value of x is:', x, 'It should be 5.');
 })();
 
@@ -46,7 +51,7 @@ function addTwo(x) {
   x = x + 2;
   return x;
 }
-//This is because x in this function is a local variable and does not change
-//the global variable x.s
+//x in this function is a local variable so it will only be used in this function
+//and does not change the global variable x
 console.log(addTwo(4)); // 6
 console.log(x); // should be 5 if you corrected the double() function above
