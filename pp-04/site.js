@@ -5,7 +5,7 @@
 var x = 5;
 
 function double(num) {
-  x = num * 2;
+  var x = num * 2;
   return x;
 }
 
@@ -17,13 +17,19 @@ console.log('The value of x is:', x, 'It should be 5.');
 //  namespace (e.g., neither its variables nor the double
 //  function can be accessed via the `window` global object,
 //  like `window.x`):
+(function() {
+  var x = 5;
+  x = x * 2;
+
+  console.log('The value of x is:', x, 'It should be 5.');
+})();
 
 
 //  3. Correct this function so that there is no i variable in
 //  the global scope:
 
 function arrayEach(array, func) {
-  for (i = 0; i < array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     func(array[i]);
   }
 }
@@ -40,6 +46,7 @@ function addTwo(x) {
   x = x + 2;
   return x;
 }
-
+//This is because x in this function is a local variable and does not change
+//the global variable x.s
 console.log(addTwo(4)); // 6
 console.log(x); // should be 5 if you corrected the double() function above
