@@ -8,32 +8,31 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* ===== BASE STYLES ===== */
 
-
 img {
   display: block;
   max-width: 100%;
 }
 
 body {
+  text-align: center;
   padding: 10%;
 }
 audio {
   cursor: pointer;
 }
-.button {
-    background-color: green;
+
+/* ===== LAYOUT STYLES ===== */
+#doorbell {
+    background-color: blue;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10px;
+    font-size: 18px;
     cursor: pointer;
 }
-/* ===== LAYOUT STYLES ===== */
-
-
-/* ===== MODULAR STYLES ===== */
-
 
 /* ===== STATE STYLES ===== */
+
+/* ===== MODULAR STYLES ===== */
