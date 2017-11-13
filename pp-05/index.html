@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" class="nojs">
+<html lang="en" class="no-js">
 <head>
   <title>Unobtrusive JavaScript</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-  <link rel="stylesheet" media="screen" href="css/screen.css" /></head>
+  <link rel="stylesheet" media="screen" href="css/screen.css" />
+</head>
 <body>
-  <audio controls>
-    <source src="media/doorbell.mp3" type="audio/mpeg">
+  <main class = "noJS">
+  <noscript>
+    <p>Your browser does not support the audio element.</p>
+    <source src="media/doorbell.mp3" type="audio/mpeg" />
   </audio>
-  <button class="button">Button</button>
+  </noscript>
+</main>
+
+  <!-- JavaScript Enabled -->
+  <button id="doorbell">Ring the Doorbell</button>
+
+  <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="site.js"></script>
+  <script>
+    document.getElementById("doorbell").addEventListener("click", ringDoorbell);
+  </script>
 </body>
 </html>
