@@ -33,6 +33,6 @@ audio {
     cursor: pointer;
 }
 
-/* ===== STATE STYLES ===== */
-
-/* ===== MODULAR STYLES ===== */
+.hide {
+  display: none;
+}
